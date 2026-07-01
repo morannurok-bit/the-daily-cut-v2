@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Register × intensity — v4</title>
+<style>
+  :root{--ink:#2A2724;--muted:#73726c;--faint:#9c9a92;--line:rgba(0,0,0,.14);--bg:#faf8f3;--card:#fff;}
+  *{box-sizing:border-box;}
+  body{margin:0;padding:26px 20px 40px;background:var(--bg);color:var(--ink);
+       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  h1{font-size:20px;font-weight:500;margin:0 0 4px;}
+  p.sub{margin:0 0 16px;color:var(--muted);font-size:14px;}
+  .legend{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:14px;font-size:13px;color:var(--muted);}
+  .legend span{display:flex;align-items:center;gap:6px;}
+  .sw{width:14px;height:14px;border-radius:4px;}
+  .sw.dash{background:transparent;border:1.5px dashed #73726c;}
+  .key{background:var(--card);border:0.5px solid var(--line);border-radius:10px;padding:12px 14px;margin-bottom:18px;
+       font-size:12.5px;color:var(--ink);line-height:1.6;}
+  .key b{font-weight:600;}
+  .key .reg{color:var(--muted);}
+  .grid{display:grid;grid-template-columns:118px 1fr 1fr 1fr;gap:7px;align-items:stretch;}
+  .chead{text-align:center;font-size:13px;font-weight:600;color:var(--muted);padding-bottom:2px;}
+  .rlab{display:flex;align-items:center;font-size:12.5px;font-weight:600;color:var(--ink);padding-right:6px;line-height:1.2;}
+  .cell{border:0.5px solid var(--line);border-radius:9px;min-height:46px;padding:7px;
+        display:flex;flex-wrap:wrap;gap:5px;align-content:flex-start;background:var(--card);}
+  .chip{display:inline-flex;align-items:center;border-radius:7px;font-size:12px;font-weight:500;
+        padding:4px 8px;color:#fff;white-space:nowrap;}
+  .mY{background:#C2703D;}
+  .mC{background:#3F7D7A;}
+  .mMat{background:#5A4A6A;}
+  .probe{background:transparent;border:1.5px dashed;padding:3px 7px;font-weight:600;}
+  .probe.mY{color:#C2703D;border-color:#C2703D;}
+  .probe.mC{color:#3F7D7A;border-color:#3F7D7A;}
+  .foot{margin-top:12px;font-size:12px;color:var(--faint);}
+  .note{margin-top:6px;font-size:12px;color:var(--muted);}
+</style>
+</head>
+<body>
+  <h1>The thumbnail pieces by register and intensity — v4</h1>
+  <p class="sub">Rows = register · columns = intensity · chip color = maturity · dashed = probe (marked, not matched) · ids name the look each piece came from</p>
+
+  <div class="legend">
+    <span><i class="sw" style="background:#C2703D"></i>young</span>
+    <span><i class="sw" style="background:#3F7D7A"></i>classic</span>
+    <span><i class="sw" style="background:#5A4A6A"></i>mature</span>
+    <span><i class="sw dash"></i>probe (not matched)</span>
+  </div>
+
+  <div class="key">
+    <span class="reg"><b>masculine</b> — refined via menswear codes: shirting, tailoring, utility</span><br>
+    <span class="reg"><b>neutral</b> — no strong gender code</span><br>
+    <span class="reg"><b>feminine-sexy</b> — body-conscious, body-led</span> &nbsp;·&nbsp;
+    <span class="reg"><b>feminine-sweet</b> — cute, playful, young-pretty</span><br>
+    <span class="reg"><b>feminine-romantic</b> — soft, floral, flowy, delicate</span> &nbsp;·&nbsp;
+    <span class="reg"><b>feminine-elegant</b> — refined feminine poise, fluid, ladylike</span>
+  </div>
+
+  <div class="grid">
+    <div></div>
+    <div class="chead">subtle</div>
+    <div class="chead">moderate</div>
+    <div class="chead">pronounced</div>
+
+    <div class="rlab">masculine</div>
+    <div class="cell"><span class="chip mC">tlv pinstripe</span><span class="chip mC">tlv bermuda</span><span class="chip mMat">fp poplin</span><span class="chip mC">ss trousers</span></div>
+    <div class="cell"><span class="chip mC">rc waistcoat</span><span class="chip mMat">fp trousers</span><span class="chip mC">ss shirt</span></div>
+    <div class="cell"></div>
+
+    <div class="rlab">neutral</div>
+    <div class="cell">
+      <span class="chip mC">rc jeans</span><span class="chip mC">rc boots</span><span class="chip mC">rc box bag</span><span class="chip mC">cc jeans</span><span class="chip mC">cc sneakers</span><span class="chip mC">cc crescent bag</span><span class="chip mY">tlv slides</span><span class="chip mC">sx jeans</span><span class="chip mC">ue trousers</span><span class="chip mC">ue tote</span><span class="chip mY">ue cap</span><span class="chip mC">ss mule</span><span class="chip mC">ss bag</span><span class="chip mC">ro bag</span><span class="chip mC">ro sandal</span><span class="chip probe mY">lp crop tee</span>
+    </div>
+    <div class="cell"><span class="chip mY">cc raglan tee</span><span class="chip mY">ue platform</span></div>
+    <div class="cell"><span class="chip mY">ue CITY tee</span><span class="chip probe mY">lp jeans</span><span class="chip probe mC">pp pants</span></div>
+
+    <div class="rlab">feminine-sexy</div>
+    <div class="cell"><span class="chip mC">ss tank</span></div>
+    <div class="cell"><span class="chip mY">sx heels</span><span class="chip mY">sx baguette</span></div>
+    <div class="cell"><span class="chip mY">sx lace tank</span></div>
+
+    <div class="rlab">feminine-sweet</div>
+    <div class="cell"></div>
+    <div class="cell"><span class="chip mY">tlv botanical tote</span><span class="chip mC">wh bow flats</span></div>
+    <div class="cell"><span class="chip mY">wh stripe jeans</span></div>
+
+    <div class="rlab">feminine-romantic</div>
+    <div class="cell"></div>
+    <div class="cell"><span class="chip mY">wh crochet hobo</span><span class="chip probe mY">bl slip</span></div>
+    <div class="cell"><span class="chip mC">wh peasant blouse</span><span class="chip mC">ro floral dress</span></div>
+
+    <div class="rlab">feminine-elegant</div>
+    <div class="cell"><span class="chip mC">rc camp shirt</span><span class="chip mMat">fp top-handle bag</span></div>
+    <div class="cell"><span class="chip mMat">fp block heels</span></div>
+    <div class="cell"></div>
+  </div>
+
+  <div class="foot">38 core pieces · 9 looks (rc refined · cc cool-casual · tlv cool-TLV · fp formal · sx sexy · ue urban · wh whimsical · ss sharp&soft · ro romantic) · 3 probes (bl boho-lace · lp leopard · pp parachute)</div>
+  <div class="note">v4 — added ss (sharp&soft) and ro (romantic) as cores; added the 3 probes as dashed chips. sx (sexy) and fp (formal-polished) unchanged. Probes are marked and excluded from the matching math. bl straddles feminine-sexy (satin slip) and feminine-romantic (lace) — placed in feminine-romantic and flagged.</div>
+</body>
+</html>
