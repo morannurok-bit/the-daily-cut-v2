@@ -23,13 +23,34 @@ docs/                  Specs & frameworks (the "source of truth" for behavior)
   body_types_rules_v2.md        Body type rules
   reference/
     body_types_rules_extracted.txt   Extracted text of the original body-types PDF
+    style thumbnails 4.pdf            Style thumbnails (source PDF)
+    V2 Questions 9.pdf                Questionnaire (English)
+    V2 Questions 16.pdf               Questionnaire (English, later rev)
+    שאלון בעברית v2 2.pdf             Questionnaire (Hebrew)
 
 src/
   engine_v2.py         Matching engine (Layer 3) — reference implementation
 
+data/
+  V2Grid_view_42.csv   The item catalog the engine scores against (595 items)
+
 assets/
   register_intensity_chart_v4.html   Register intensity chart
+  images/              95 reference/style images (Q9/Q11/Q13 options, product & photo refs)
+    _manifest.json     Maps each original filename -> saved file
 ```
+
+> **Image format note:** the 95 files in `assets/images/` were pulled from the
+> claude.ai project, which only exposes them as **webp previews (~444px)**, not the
+> original JPEG/PNG. `_manifest.json` records each original filename. If you need the
+> full-resolution originals, they live in your local `~/Downloads` / Photos.
+
+> **Catalog / engine path note:** `src/engine_v2.py` hardcodes
+> `/mnt/project/V2Grid_view_40.csv` (a Claude-sandbox path, and note it references
+> **v40**). The current catalog in this repo is **v42** (`data/V2Grid_view_42.csv`,
+> byte-identical to the project's version). To run the engine locally, point
+> `load_catalog(...)` at `data/V2Grid_view_42.csv`. Left as-is here to keep the
+> migration faithful — adjust when you're ready.
 
 ## Provenance
 
